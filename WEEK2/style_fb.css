@@ -1,0 +1,74 @@
+header{
+    color: white;
+    background-color: rgb(62, 80, 184);
+    border: 0.3px solid black;
+}
+
+body{
+    background-color: lavender;
+}
+input{
+    height: 20px;
+    border-radius: 6px;
+    width: 160px;
+}
+
+
+#logo{
+    padding-left: 50px;
+    font-size: 300%;
+}
+
+section{
+    text-align: right;
+    position: static;
+    padding: 30px;
+}
+
+.div1{
+    float: left;
+    width: 300px;
+    padding-top: 30px;
+    /* padding-left: 160px; */
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.div2{
+    width: 400px;
+    /* padding-left: 700px; */
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    float: right;
+}
+.div2::after{
+    clear: both;
+}
+.div2 #mob{
+    width: 330px;
+}
+
+.div2 #pass{
+    width: 330px;
+
+}
+
+main{
+    height: 500px;
+}
+
+footer{
+    margin-bottom: 10px;
+    text-align: center;
+}
+.headd #loginBut{
+    height: 20px;
+    width: 100px;
+}
+.headd #forgot{
+    margin-right: 130px; 
+}
+.wrapper{
+    width: 800px;
+    margin: 0 auto;
+}

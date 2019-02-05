@@ -1,0 +1,55 @@
+body {
+    background-image: url(homepage.jpg);
+    background-attachment: fixed;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    margin-left: 600px;
+    height: 200px;
+    width: 300px;
+    background-color: white;
+}
+input{
+    border-radius: 6px;
+    height: 40px;
+    width: 240px;
+}
+
+img{
+    height: 80px;
+    width: 200px;
+}
+section {
+    position: static;
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid gray;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+button{
+}
+.main-box #fB {
+    font-size: 90%;
+    height: 40px;
+    width: 250px;
+    background: lightskyblue;
+    border-radius: 7px;
+}
+.main-box #signUpBut {
+    font-size: 90%;
+    height: 40px;
+    width: 250px;
+    background: lightskyblue;
+    border-radius: 7px;
+}
+
+.wrapper{
+    position: static;
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid white;
+}
