@@ -31,11 +31,13 @@ function remove() {
 }
  
 function show() {
+
+
     var todos = get_todos();
  
     var html = '<ul>';
     for(var i=0; i<todos.length; i++) {
-        html += '<li>' + todos[i] + '<button class="remove" id="' + i  + '">x</button></li>';
+        html += '<li>' +'<input type="checkbox" class="check" id="' + i +'">' + todos[i] + '<button class="remove" id="' + i  + '"></button>' + '</li>';
     };
     html += '</ul>';
  
@@ -45,7 +47,16 @@ function show() {
     for (var i=0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', remove);
     };
+
+    var item = document.getElementsByClassName('check');
+    for (var i=0; i < item.length; i++) {
+        if (item[i].checked === true){
+            item[i].innerHTML = '<del>' + item[i] + '</del>';
+        }
+    }
 }
+
+
  
 document.getElementById('add').addEventListener('click', add);
 show();

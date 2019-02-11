@@ -1,26 +1,58 @@
 header{
     height: 50px;
-    width: 1140px;
     background-color: black;
     font-size: 50%;
     text-align: left;
+}
+*{
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 h1{
     padding-left: 30px;
     padding-top: 20px;
 }
 .wrapper{
-    margin-left: 300px;
     margin-top: 120px;
+    text-align: center;
+}
+.todos{
+
+}
+.remove{
+    height: 20px;
+    width: 20px;
+    background-image: url(bin.png);
+    background-repeat: no-repeat;
+}
+.check{
+    padding-left: 10px;
+    padding-top: 5px;
+    height: 25px;
+    width: 25px;
+}
+.task{
+    width: 800px;
 }
 input{
     border-radius: 5%;
     margin-left: 60px;
     margin-right: 20px;
     height: 30px;
-    width: 400px;
 }
-button{
+ul{
+    padding-left: 250px;
+    width: 700px;    
+    padding-top: 40px;
+    list-style-type: none;
+}
+li{
+    padding-left: 20px;
+    height: 40px;
+    border: 2px solid rgba(0, 0, 0, 0.383);
+}
+.addButton{
     color: aliceblue;
     background-color: rgba(0, 0, 255, 0.685);
     border-radius: 5%;
