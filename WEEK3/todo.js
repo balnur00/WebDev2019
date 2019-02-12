@@ -62,7 +62,7 @@ function show() {
  
     var html = '<ul>';
     for(var i=0; i<todos.length; i++) {
-        html += '<li>' +'<input type="checkbox" class="check" id="' + i +'"/>' + todos[i] + '<button class="remove" id="' + i  + '"></button>' + '</li>';
+        html += '<li>' +'<input type="checkbox" class="check" id="' + i +'"/>' + todos[i] + '<button class="remove" id="' + i  + '"><i class="fa fa-trash-o" style="font-size:20px;color:red"></i></button>' + '</li>';
     };
     html += '</ul>';
  
