@@ -17,9 +17,7 @@ h1{
     margin-top: 120px;
     text-align: center;
 }
-.todos{
 
-}
 .remove{
     height: 20px;
     width: 20px;
@@ -32,13 +30,11 @@ h1{
     height: 25px;
     width: 25px;
 }
-.task{
-    width: 800px;
+#task{
+    width: 300px;
 }
 input{
     border-radius: 5%;
-    margin-left: 60px;
-    margin-right: 20px;
     height: 30px;
 }
 ul{

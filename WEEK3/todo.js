@@ -29,15 +29,40 @@ function remove() {
  
     return false;
 }
- 
+
+function boxChecked(event) {
+    const element = event.target;
+    if(element.type === "checkbox") {
+        element.parentNode.style.textDecoration = "line-through";
+    }
+}
+
+/*function checkes(){
+    var id = this.getAttribute('id');
+    var checBox = this.getElementsByClassName('check');
+    var todos = get_todos();
+    
+    if(checBox.checked){
+        todos[id].style.textDecoration="line-through"
+    }else{
+        todos[id].style.textDecoration="none"
+    }
+
+    var id = this.getAttribute('id');
+    if (todos[id].checked){
+        todos[id].innerHTML = '<del>' + todos[id] + '</del>';
+    }else{
+        todos[id].innerHTML = todos[id];
+    }
+    
+}*/
+
 function show() {
-
-
     var todos = get_todos();
  
     var html = '<ul>';
     for(var i=0; i<todos.length; i++) {
-        html += '<li>' +'<input type="checkbox" class="check" id="' + i +'">' + todos[i] + '<button class="remove" id="' + i  + '"></button>' + '</li>';
+        html += '<li>' +'<input type="checkbox" class="check" id="' + i +'"/>' + todos[i] + '<button class="remove" id="' + i  + '"></button>' + '</li>';
     };
     html += '</ul>';
  
@@ -47,13 +72,12 @@ function show() {
     for (var i=0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', remove);
     };
+    var items = document.getElementsByClassName('check');
+    for (var i=0; i < items.length; i++) {
+        items[i].addEventListener('click', boxChecked);
+    };
 
-    var item = document.getElementsByClassName('check');
-    for (var i=0; i < item.length; i++) {
-        if (item[i].checked === true){
-            item[i].innerHTML = '<del>' + item[i] + '</del>';
-        }
-    }
+   
 }
 
 
