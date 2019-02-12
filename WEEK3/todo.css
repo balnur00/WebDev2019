@@ -43,8 +43,12 @@ ul{
     padding-top: 40px;
     list-style-type: none;
 }
+.wrRemove{
+    padding-left: 100px;
+
+}
 li{
-    text-align: left;
+    position: relative;
     padding-left: 20px;
     height: 40px;
     border: 1px solid rgba(0, 0, 0, 0.383);
