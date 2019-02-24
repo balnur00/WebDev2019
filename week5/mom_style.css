@@ -1,0 +1,96 @@
+html, body{
+    height: 100%;
+
+}
+h1{
+    font-size: 500%;
+}
+h2{
+    font-size: 180%;
+}
+.top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-size:25px;
+    display: flex;
+    padding:20px;
+    color:rgba(255,255,255,0.5);
+  
+}
+.addButton{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: aliceblue;
+    border-radius: 5%;
+    height: 30px;
+    width: 50px;
+}
+
+input{
+    color: whitesmoke;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #666;
+    border-radius: 5px;
+    height: 30px;
+    width: 200px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0, .55), 0px 1px 1px rgba(255,255,255,.5);
+}
+
+body{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    margin: 0;
+    font-family: sans-serif;
+
+}
+.top .left{
+    flex: 1 0 auto;
+    text-align: left;
+}
+.todo{
+    color: beige;
+    margin-top: 80px;
+    text-align: center;
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.remove{
+    background-color: white;    
+    border: 0;  
+    height: 30px;
+    width: 30px;
+}
+.check{
+    padding-left: 10px;
+    padding-top: 10px;
+    height: 25px;
+    width: 25px;
+}
+#task{
+    width: 300px;
+}
+
+ul{
+    width: 700px;    
+    padding-top: 40px;
+    list-style-type: none;
+}
+.wrRemove{
+    padding-left: 100px;
+
+}
+li{
+    position: relative;
+    padding-left: 20px;
+    height: 40px;
+}
