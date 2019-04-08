@@ -1,0 +1,13 @@
+<div class="header">
+	<h1>My ToDo List</h1>
+	<h2>Getting Things Done</h2>
+</div>
+<div class="body">
+	<div *ngFor="let t of tasklist" (click="getTaskFromList(t)")>{{t.id}} : {{t.name}} </div>
+
+</div>
+
+
+<div>
+	<div *ngFor="let t of task">{{t.id}} : {{t.name}} : {{t.created_at}} : {{t.due_on}} : {{t.status}} </div>
+</div>
