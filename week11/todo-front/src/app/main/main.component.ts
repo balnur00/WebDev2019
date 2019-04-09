@@ -15,14 +15,16 @@ export class MainComponent implements OnInit {
   public tasks: Task[] = [];
   
   ngOnInit() {
-    this.provider.getTasksList().then(res =>{
+    this.provider.getTasksList().then(res => {
       this.tasksList = res;
+      console.log(this.tasksList);
     })
   }
 
   getTaskFromList(tasklist: TaskList){
     this.provider.getTasks(tasklist.id).then(res=>{
       this.tasks = res;
+      console.log(res);
     });
   }
 

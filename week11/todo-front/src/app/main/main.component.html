@@ -1,13 +1,24 @@
-<div class="header">
-	<h1>My ToDo List</h1>
-	<h2>Getting Things Done</h2>
-</div>
-<div class="body">
-	<div *ngFor="let t of tasklist" (click="getTaskFromList(t)")>{{t.id}} : {{t.name}} </div>
+<div class="wrapper">
+	<div class="header">
+		<h1 style="color:aliceblue">My ToDo List</h1>
+		<h2 style="color:aliceblue">Getting Things Done</h2>
+	</div>
 
-</div>
+	<div class="tasklist"id="tasks" >
+		<div *ngFor="let t of tasksList" (click)="getTaskFromList(t)">
+			<span>ID: </span>{{t.id}} -------- 
+			<span>Name: </span>{{t.name}} 
+		</div>
+	</div>
 
 
-<div>
-	<div *ngFor="let t of task">{{t.id}} : {{t.name}} : {{t.created_at}} : {{t.due_on}} : {{t.status}} </div>
+	<div class="ListOfChosenTasks">
+		<div *ngFor="let t of tasks">
+			<span>ID: </span>	{{t.id}} -------- 
+			<span>Name: </span>	{{t.name}} -------- 
+			<span>Created at </span>	{{t.created_at}} : 
+			<span>Due on </span>	{{t.due_on}} : 
+			<span>Status: </span>	{{t.status}} 
+		</div>
+	</div>
 </div>
