@@ -6,19 +6,19 @@
 
 	<div class="tasklist"id="tasks" >
 		<div *ngFor="let t of tasksList" (click)="getTaskFromList(t)">
-			<span>ID: </span>{{t.id}} -------- 
-			<span>Name: </span>{{t.name}} 
+			<span style="color: white;">| ID | </span>{{t.id}}  
+			<span style="color: white;">| Name | </span>{{t.name}} 
 		</div>
 	</div>
 
 
 	<div class="ListOfChosenTasks">
 		<div *ngFor="let t of tasks">
-			<span>ID: </span>	{{t.id}} -------- 
-			<span>Name: </span>	{{t.name}} -------- 
-			<span>Created at </span>	{{t.created_at}} : 
-			<span>Due on </span>	{{t.due_on}} : 
-			<span>Status: </span>	{{t.status}} 
+			<span style="color: red;"> ID | </span>	{{t.id}} <span style="color: red;">|</span> 
+			<span style="color: red;"> Name | </span>	{{t.name}} <span style="color: red;">|</span> 
+			<span style="color: red;"> Created at | </span> {{t.created_at}} <span style="color: red;">|</span>
+			<span style="color: red;"> Due on |</span>	{{t.due_on}} <span style="color: red;">|</span>
+			<span style="color: red;"> Status |</span>	{{t.status}} 
 		</div>
 	</div>
 </div>
