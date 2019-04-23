@@ -1,23 +1,23 @@
 .wrapper{
-	text-align: center;
-	margin: 0 auto;
+  text-align: center;
+  margin: 0 auto;
 }
 .header{
-	padding-top: 30px;
-	padding-bottom: 20px;
-	background-color: #8b41d1ec;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  background-color: #8b41d1ec;
 }
 
 .tasklist{
-	background-color: rgba(137, 43, 226, 0.294);
-	padding-top: 30px;
-	padding-bottom: 20px;
+  background-color: rgba(137, 43, 226, 0.294);
+  padding-top: 30px;
+  padding-bottom: 20px;
 }
 
 .ListOfChosenTasks{
-	background-color: rgba(137, 43, 226, 0.082);
-	padding-top: 30px;
-	padding-bottom: 20px;
+  background-color: rgba(137, 43, 226, 0.082);
+  padding-top: 30px;
+  padding-bottom: 20px;
 }
 
 

@@ -10,19 +10,24 @@ import { TaskList, Task } from '../shared/models/model';
 export class MainComponent implements OnInit {
 
   constructor(private provider: ProviderService) { }
+
   public tasksList: TaskList[] = [];
   public tasks: Task[] = [];
-  public name: any = '';
-  public createdAt: any = '';
-  public dueOn: any = '';
-  public status: any = '';
-  public id: any = '';
+  public taskList: TaskList;
+  public task: Task;
+  public name: any;
+  public tname: any;
+  public createdAt: any;
+  public dueOn: any;
+  public status: any;
+  public id: any;
   ngOnInit() {
     this.provider.getTasksList().then(res => {
       this.tasksList = res;
       console.log(this.tasksList);
     });
   }
+
   getTaskFromList(tasklist: TaskList) {
     this.provider.getTasks(tasklist.id).then(res => {
       this.tasks = res;
@@ -52,40 +57,23 @@ export class MainComponent implements OnInit {
       });
     }
   }
-  // createTask() {
-  //   if (this.id !== '') {
-  //     this.provider.createTask(t, this.name, this.createdAt, this.dueOn, this.status).
-  //     then((task: Task) => {
-  //       this.name = '';
-  //       this.createdAt = '';
-  //       this.dueOn = '';
-  //       this.status = '';
-  //       this.tasks.push(task.name, rCr, rDue, rSt);
-  //     });
-  //   }
-    // if (this.name !== '') {
-    //   this.provider.createTask(this.name).then(resName => {
-    //     this.name = '';
-    //     this.tasks.push(resName);
-    //   });
-    // }
-    // if (this.createdAt !== '') {
-    //   this.provider.createTask(this.createdAt).then(resCr => {
-    //     this.createdAt = '';
-    //     this.tasks.push(resCr);
-    //   });
-    // }
-    // if (this.dueOn !== '') {
-    //   this.provider.createTask(this.dueOn).then(resD => {
-    //     this.dueOn = '';
-    //     this.tasks.push(resD);
-    //   });
-    // }
-    // if (this.status !== '') {
-    //   this.provider.createTask(this.status).then(resStat => {
-    //     this.status = '';
-    //     this.tasks.push(resStat);
-    //   });
-    // }
-  // }
+  updateTask(task: Task) {
+    this.provider.updateTask(task).then(res => {});
+  }
+  deleteTask(task: Task) {
+    this.provider.deleteTask(task).then(res => {
+      this.provider.getTasks(task.task_list.id).then(r => {
+        this.tasks = r;
+      });
+    });
+  }
+  createTask() {
+    if (this.tname !== '') {
+      this.provider.createTask(this.tname, this.createdAt, this.dueOn, this.status, this.id).then(res => {
+        this.tname = '';
+        this.status = '';
+        this.id = '';
+      });
+    }
+  }
 }

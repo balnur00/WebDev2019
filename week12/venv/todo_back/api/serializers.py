@@ -17,13 +17,17 @@ class TaskListSerializer(serializers.Serializer):
         return instance
 
 
+class TaskListSerializer2(serializers.ModelSerializer):
+    id = serializers.IntegerField(read_only=True)
+
+    class Meta:
+        model = TaskList
+        fields = ('__all__')
+
+
 class TaskSerializer(serializers.ModelSerializer):
     id = serializers.IntegerField(read_only=True)
-    name = serializers.CharField(required=True)
-    created_at = serializers.DateTimeField(required=True)
-    due_on = serializers.DateTimeField(required=True)
-    status = serializers.CharField(required=True)
 
     class Meta:
         model = Task
-        fields = ('id', 'name', 'created_at', 'due_on', 'status')
+        fields = ('__all__')

@@ -15,9 +15,7 @@ export class ProviderService extends MainService{
   getTasksList(): Promise<TaskList[]> {
     return this.get('http://localhost:8000/api/tasklist/', {});
   }
-  getTasks(id: number): Promise<Task[]> {
-    return this.get(`http://localhost:8000/api/tasklist/${id}/task`, {});
-  }
+
   createTaskList(name: any): Promise<TaskList> {
     return this.post('http://localhost:8000/api/tasklist/', {
       name
@@ -31,12 +29,28 @@ export class ProviderService extends MainService{
   deleteTaskList(tasklist: TaskList): Promise<TaskList> {
     return this.delet(`http://localhost:8000/api/tasklist/${tasklist.id}/`, {});
   }
-  createTask(tasklist: TaskList, name: any, createdAt: any, dueOn: any, status: any): Promise<Task> {
-    return this.post(`http://localhost:8000/api/tasklist/${tasklist.id}/task`, {
-      name,
-      createdAt,
-      dueOn,
-      status
+  getTasks(id: number): Promise<Task[]> {
+    return this.get(`http://localhost:8000/api/tasklist/${id}/task/`, {});
+  }
+  updateTask(task: Task): Promise<Task> {
+    return this.put(`http://localhost:8000/api/tasklist/${task.task_list.id}/task/`, {
+      name: task.name,
+      status: task.status,
+      created_at: task.created_at,
+      due_on: task.due_on,
+      task_list: task.task_list
     });
+  }
+  createTask(tname: string, createdat: Date, dueon: Date, tstatus: string, tasklist: number): Promise<Task> {
+    return this.post(`http://localhost:8000/api/tasklist/${tasklist}/task/`, {
+      name: tname,
+      created_at: createdat,
+      due_on: dueon,
+      status: tstatus,
+      task_list: tasklist
+    });
+  }
+  deleteTask(task: Task) {
+    return this.delet(`http://localhost:8000/api/tasklist/${task.task_list.id}/task/${task.id}/`, {});
   }
 }
